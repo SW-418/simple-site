@@ -1,0 +1,35 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      git-commit:
+        description: Git commit SHA (Optional)
+        required: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository (Latest)
+        uses: actions/checkout@v4
+        if: github.event.inputs.git-commit == ''
+      - name: Clone repository (Custom commit)
+        uses: actions/checkout@v4
+        if: github.event.inputs.git-commit != ''
+        with:
+          ref: ${{ github.event.inputs.git-commit }}
+      - name: Install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
+          check-latest: true
+      - name: npm install
+        run: npm install
+      - name: npm build
+        run: npm run build
+      - name: Upload build output
+        uses: actions/upload-artifact@v4
+        with:
+          name: sam-simple-site-out
+          path: out
