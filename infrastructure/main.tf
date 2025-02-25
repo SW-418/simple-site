@@ -5,6 +5,13 @@ terraform {
       version = "~> 5.88"
     }
   }
+
+  # Use S3 to store current state - Locking overkill for now
+  backend "s3" {
+    bucket = "sw-418-tf-state"
+    key    = "simple-site"
+    region = "ca-central-1"
+  }
 }
 
 provider "aws" {
