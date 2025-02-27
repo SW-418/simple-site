@@ -18,16 +18,7 @@ provider "aws" {
   region = "ca-central-1"
 }
 
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-
-  bucket = "sam-wells-simple-site"
-  acl    = "private"
-
-  control_object_ownership = true
-  object_ownership         = "ObjectWriter"
-
-  versioning = {
-    enabled = true
-  }
+resource "aws_s3_bucket" "sam-wells-simple-site" {
+  bucket        = "sam-wells-simple-site"
+  force_destroy = true
 }
