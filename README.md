@@ -1,13 +1,30 @@
 # simple-site
 
-## Getting Started
+Basic site using React/NextJS/Typescript.
 
-First, run the development server:
+Deployed via AWS as a static site to a private S3 bucket. Content served via a CDN (CloudFront).
+
+## Running development server
 
 ```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navigate to [http://localhost:3000](http://localhost:3000) - Will refresh on changes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build and view production build
+
+Run:
+```bash
+yarn build
+```
+
+Then run:
+
+```bash
+yarn start
+```
+
+Navigate to [http://localhost:3000](http://localhost:3000) - Won't refresh on changes.
+
+What is generated and viewed here will match what will be deployed to Prod.
