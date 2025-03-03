@@ -1,6 +1,8 @@
 name: Tag on merge to main
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
       - main
 
@@ -13,8 +15,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: '0'
-
       - name: Tag version and push tag
         uses: anothrNick/github-tag-action@v1
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: false
