@@ -6,7 +6,7 @@ export default function Home() {
       <main className="flex flex-col row-start-2 items-center">
           <div className="flex items-center space-x-6">
               <div className="">
-                  <Image src="/sw.jpg" alt="profile picture" width={200} height={200} className="rounded-xl" />
+                  <Image src="/sw.jpg" alt="profile picture" width={150} height={150} className="rounded-xl" />
               </div>
               <div className="text-sm w-3/4">
                   <h1>Hi - I&apos;m Sam 👋</h1>
