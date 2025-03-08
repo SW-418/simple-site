@@ -3,7 +3,7 @@ import ImageButton from "@/app/components/image-button";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-1 grid-rows-[auto_1fr_auto] h-screen font-[family-name:var(--font-geist-sans)] p-8">
+    <div className="grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-[100dvh] h-[100dvh] font-[family-name:var(--font-geist-sans)] p-8">
       <div className="flex flex-row justify-center">
           <div className="bg-neutral-600 p-1.5 rounded-xl">
               <div className="flex space-x-3">
