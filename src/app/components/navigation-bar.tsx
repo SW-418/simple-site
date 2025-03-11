@@ -18,9 +18,9 @@ export default function NavigationBar({ navigatedPage = "/", navigatedPageText =
                 <ImageButton logo="/insta.png" alt="Instagram Profile" url="https://www.instagram.com/__sam.wells" size={50} />
                 <ImageButton logo="/linkedin.png" alt="LinkedIn Profile" url="https://www.linkedin.com/in/sw-418" size={50} />
             </div>
-        <div className="bg-black p-1 rounded-xl flex justify-center hover:bg-neutral-700">
-          <Link href={navigatedPage}>{navigatedPageText}</Link>
-        </div>
+            <div className="bg-black p-1 rounded-xl flex justify-center hover:bg-neutral-00">
+                <Link href={navigatedPage}>{navigatedPageText}</Link>
+            </div>
         </div>
     </div>
     )
