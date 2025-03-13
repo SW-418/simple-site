@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 
 export default function Photography() {
     return (
-        <div className="grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-[100dvh] h-[100dvh] font-[family-name:var(--font-geist-sans)] p-8">
+        <div className="grid grid-cols-1 grid-rows-[1fr_1fr_1fr] min-h-[100dvh] h-[100dvh] font-[family-name:var(--font-geist-sans)] p-8">
           <NavigationBar />
           <main className="flex flex-col items-center justify-center">
             <div className="flex flex-col items-center justify-center text-2xl color-yellow pt-8">
