@@ -65,6 +65,13 @@ resource "aws_cloudfront_origin_access_control" "cloudfront_s3_access" {
   signing_protocol                  = "sigv4"
 }
 
+resource "aws_cloudfront_function" "url_rewriter" {
+  name    = "url-rewriter"
+  runtime = "cloudfront-js-2.0"
+  publish = true
+  code    = file("${path.module}/viewer-request.js")
+}
+
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
     domain_name              = aws_s3_bucket.sam-wells-simple-site.bucket_regional_domain_name
@@ -95,6 +102,11 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     min_ttl                = 0
     default_ttl            = 3600
     max_ttl                = 86400
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.url_rewriter.arn
+    }
   }
 
   price_class = "PriceClass_All"
