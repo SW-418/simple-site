@@ -9,7 +9,7 @@ export default function Photography() {
           <main>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
                 <ImageWithDescription image="/mamab.jpg" description="Mama Bear - Toba Inlet" />
-                <ImageWithDescription image="/eclipse.jpg" description="Solar Eclipse" />
+                <ImageWithDescription image="/eclipse.jpg" description="Lunar Eclipse 2025" />
                 <ImageWithDescription image="/lake.jpg" description="Johnson Lake" />
                 <ImageWithDescription image="/tip.jpg" description="Mount Girouard - Banff" />
                 <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
