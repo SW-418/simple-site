@@ -4,26 +4,22 @@ import Footer from "../components/footer";
 
 export default function Photography() {
     return (
-        <div className="grid grid-cols-1 grid-rows-[1fr_1fr_1fr] min-h-[100dvh] h-[100dvh] font-[family-name:var(--font-geist-sans)] p-8">
+        <div className="grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-[100dvh] font-[family-name:var(--font-geist-sans)] p-8">
           <NavigationBar />
-          <main className="flex flex-col items-center justify-center">
-            <div className="flex flex-col items-center justify-center text-2xl color-yellow pt-8">
-                <h1> Work In Progress</h1>
-                <h1> Please enjoy each Heron equally </h1>
-            </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8 pb-8">
+          <main>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+                <ImageWithDescription image="/mamab.jpg" description="Mama Bear - Toba Inlet" />
+                <ImageWithDescription image="/eclipse.jpg" description="Solar Eclipse" />
+                <ImageWithDescription image="/lake.jpg" description="Johnson Lake" />
+                <ImageWithDescription image="/tip.jpg" description="Mount Girouard - Banff" />
                 <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" /> 
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
-                <ImageWithDescription image="/heron.jpg" description="Heron - Lost Lagoon" />
+                <ImageWithDescription image="/inukshuk.jpg" description="Inukshuk - Vancouver Seawall" />
+                <ImageWithDescription image="/coyote.jpg" description="Coyote - Near Kamloops" />
+                <ImageWithDescription image="/eagle.jpg" description="Eagle - UBC" />
+                <ImageWithDescription image="/sunset.jpg" description="Sunset" />
+                <ImageWithDescription image="/dahlia.jpg" description="Dahlia - Butchart Gardens" />
+                <ImageWithDescription image="/ice.jpg" description="Icy" />
+                <ImageWithDescription image="/camp.jpg" description="Backcountry Camp - Lindeman Lake" />
               </div>
           </main>
           <Footer />
