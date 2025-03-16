@@ -10,19 +10,19 @@ interface NavigationBarProps {
 
 export default function NavigationBar({ navigatedPage = "/", navigatedPageText = "Home" }: NavigationBarProps) {
     return (
-        <nav className="bg-white/5 backdrop-blur-sm w-[60%] md:w-[50%] lg:w-[45%] min-w-[340px] rounded-lg mx-auto">
+        <nav className="bg-white/5 backdrop-blur-sm rounded-lg mx-auto">
             <div className="flex items-center justify-between p-2 pl-2 pr-2">
             <Link 
                 href={navigatedPage}
-                className="text-black/90 text-sm bg-white/10 hover:bg-white/15 px-2 py-1.5 rounded-lg transition-colors font-medium min-w-[90px] text-center"
+                className="text-white text-sm bg-white/10 hover:bg-white/15 px-2 py-1.5 rounded-lg transition-colors font-medium min-w-[90px] text-center"
             >
                 {navigatedPageText}
             </Link>
 
             <div className="flex bg-white/10 rounded-lg gap-3 p-1.5">
-                <ImageButton logo="/gh.png" alt="Github Profile SW-418" url="https://github.com/SW-418" size={24} />
-                <ImageButton logo="/insta.png" alt="Instagram Profile" url="https://www.instagram.com/__sam.wells" size={24} />
-                <ImageButton logo="/linkedin.png" alt="LinkedIn Profile" url="https://www.linkedin.com/in/sw-418" size={24} />
+                <ImageButton logo="/gh.png" alt="Github Profile SW-418" url="https://github.com/SW-418" size={24} className="invert-100" />
+                <ImageButton logo="/insta.png" alt="Instagram Profile" url="https://www.instagram.com/__sam.wells" size={24} className="invert-100" />
+                <ImageButton logo="/linkedin.png" alt="LinkedIn Profile" url="https://www.linkedin.com/in/sw-418" size={24} className="invert-100" />
             </div>
             </div>
         </nav>
