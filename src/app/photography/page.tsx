@@ -4,10 +4,12 @@ import Footer from "../components/footer";
 
 export default function Photography() {
     return (
-        <div className="grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-[100dvh] font-[family-name:var(--font-geist-sans)] p-8">
-          <NavigationBar />
-          <main>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+        <div className="min-h-[100dvh] font-[family-name:var(--font-geist-sans)] flex flex-col">
+          <div className="sticky top-0 z-10 pt-4">
+            <NavigationBar navigatedPage="/" navigatedPageText="Home" />
+          </div>
+          <main className="flex-1 px-8 py-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                 <ImageWithDescription image="/mamab.jpg" description="Mama Bear - Toba Inlet" />
                 <ImageWithDescription image="/eclipse.jpg" description="Lunar Eclipse 2025" />
                 <ImageWithDescription image="/lake.jpg" description="Johnson Lake" />
@@ -22,7 +24,9 @@ export default function Photography() {
                 <ImageWithDescription image="/camp.jpg" description="Backcountry Camp - Lindeman Lake" />
               </div>
           </main>
-          <Footer />
+          <div className="p-8 pt-4 flex justify-center">
+            <Footer />
+          </div>
         </div>
       );
 }
