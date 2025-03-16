@@ -14,7 +14,7 @@ export default function NavigationBar({ navigatedPage = "/", navigatedPageText =
             <div className="flex items-center justify-between p-2 pl-2 pr-2">
             <Link 
                 href={navigatedPage}
-                className="text-black text-sm bg-white/10 hover:bg-white/15 backdrop-blur-sm px-2 py-1.5 rounded-lg transition-colors font-medium min-w-[90px] text-center"
+                className="text-black/90 text-sm bg-white/10 hover:bg-white/15 px-2 py-1.5 rounded-lg transition-colors font-medium min-w-[90px] text-center"
             >
                 {navigatedPageText}
             </Link>
