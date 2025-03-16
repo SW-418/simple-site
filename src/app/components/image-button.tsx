@@ -9,12 +9,14 @@ interface ImageButtonProps {
     url: string;
     /** Image size - Used for height and width */
     size: number;
+    /** Optional className for additional styling */
+    className?: string;
 }
 
-export default function ImageButton({ logo, alt, url, size }: ImageButtonProps) {
+export default function ImageButton({ logo, alt, url, size, className }: ImageButtonProps) {
     return (
         <a href={url}>
-            <Image src={logo} alt={alt} width={size} height={size} />
+            <Image src={logo} alt={alt} width={size} height={size} className={className} />
         </a>
     )
 }
