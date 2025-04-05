@@ -1,10 +1,9 @@
 import NavigationBar from "../components/navigation-bar";
 import ImageWithDescription from "../components/image-with-description";
-import Footer from "../components/footer";
 
 export default function Photography() {
     return (
-        <div className="min-h-[100dvh] font-[family-name:var(--font-geist-sans)] flex flex-col w-[90%] md:w-[80%] xl:w-[70%] 2xl:w-[60%] mx-auto">
+        <div className="min-h-[100dvh] font-[family-name:var(--font-geist-sans)] flex flex-col w-[90%] md:w-[80%] xl:w-[70%] 2xl:w-[60%] mx-auto pb-8">
           <div className="sticky top-0 z-10 pt-4">
             <NavigationBar navigatedPage="/" navigatedPageText="Home" />
           </div>
@@ -24,9 +23,6 @@ export default function Photography() {
                 <ImageWithDescription image="/camp.jpg" description="Backcountry Camp - Lindeman Lake" />
               </div>
           </main>
-          <div className="p-8 pt-4 flex justify-center">
-            <Footer />
-          </div>
         </div>
       );
 }
