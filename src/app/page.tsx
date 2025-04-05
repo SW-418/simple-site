@@ -1,10 +1,9 @@
 import Image from "next/image";
 import NavigationBar from "@/app/components/navigation-bar";
-import Footer from "@/app/components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-[100dvh] font-[family-name:var(--font-geist-sans)] flex flex-col w-[90%] md:w-[80%] xl:w-[60%] mx-auto">
+    <div className="min-h-[100dvh] font-[family-name:var(--font-geist-sans)] flex flex-col w-[90%] md:w-[80%] xl:w-[60%] mx-auto pb-8">
       <div className="sticky top-0 z-10 pt-4">
         <NavigationBar navigatedPage="/photography" navigatedPageText="Photography" />
       </div>
@@ -14,13 +13,10 @@ export default function Home() {
               <div className="text-sm md:text-base text-left">
                   <h1>Hi - I&apos;m Sam 👋</h1>
                   <br />
-                  <p>I&apos;m a Software Engineer mainly focused on backend development 👨🏽‍💻</p>
+                  <p>Photographer, runner, music lover and software engineer based in Vancouver, BC, Canada 🇨🇦</p>
               </div>
           </div>
       </main>
-      <div className="p-8 pt-4 flex justify-center">
-        <Footer />
-      </div>
     </div>
   );
 }
