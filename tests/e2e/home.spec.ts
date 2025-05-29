@@ -137,6 +137,6 @@ test.describe('Home Page E2E Tests', () => {
     // Assert the navigation link to Photography
     const photographyLink = page.getByRole('link', { name: 'Photography' });
     await expect(photographyLink).toBeVisible();
-    await expect(photographyLink).toHaveAttribute('href', '/photography');
+    await expect(photographyLink).toHaveAttribute('href', '/photography/');
   });
 });

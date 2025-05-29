@@ -10,7 +10,7 @@
     "clean": "rimraf .next out",
     "test": "jest",
     "test:infra": "jest infrastructure/",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright install && playwright test"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.8",
