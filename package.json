@@ -12,7 +12,7 @@
     "test:infra": "jest infrastructure/"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.2",
+    "@tailwindcss/postcss": "^4.1.8",
     "next": "15.3.2",
     "react": "^19",
     "react-dom": "^19"
