@@ -9,7 +9,8 @@
     "lint": "next lint --fix",
     "clean": "rimraf .next out",
     "test": "jest",
-    "test:infra": "jest infrastructure/"
+    "test:infra": "jest infrastructure/",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.8",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.52.0",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
