@@ -124,7 +124,7 @@ test.describe('Home Page E2E Tests', () => {
 
     // Assert the greeting text
     const heading = page.locator('h1');
-    await expect(heading).toContainText("Hi - I'm Sam");
+    await expect(heading).toContainText("Hi - I'm Sandwich");
 
     // Assert the introductory paragraph
     // Assuming this is the first <p> tag after the <h1> or within a specific identifiable container.
