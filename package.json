@@ -13,7 +13,7 @@
     "test:e2e": "playwright install --with-deps && playwright test"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.8",
+    "@tailwindcss/postcss": "^4.1.10",
     "next": "15.3.3",
     "react": "^19",
     "react-dom": "^19"
