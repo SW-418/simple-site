@@ -1,11 +1,10 @@
-import { test, expect, Page } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { execSync, spawn, ChildProcess } from 'child_process';
 import { promisify } from 'util';
 
 const PORT = 3000;
 const BASE_URL = `http://localhost:${PORT}`;
-const E2E_DIR = __dirname; // tests/e2e
-const ROOT_DIR = `${E2E_DIR}/../..`; // Go up two levels to project root
+const ROOT_DIR = `${__dirname}/../..`; // Go up two levels to project root
 
 let serverProcess: ChildProcess | null = null;
 const sleep = promisify(setTimeout);
@@ -126,15 +125,12 @@ test.describe('Home Page E2E Tests', () => {
     const heading = page.locator('h1');
     await expect(heading).toContainText("Hi - I'm Sam 👋");
 
-    // Assert the introductory paragraph
-    // Assuming this is the first <p> tag after the <h1> or within a specific identifiable container.
-    // If the structure is <main> -> <section> -> <p>, this might be page.locator('main section p').first()
-    // For simplicity, let's assume it's a unique enough paragraph or the most prominent one.
+    // Assert the intro paragraph
     const introParagraph = page.locator('p').filter({ hasText: /Photographer, runner, music lover/ });
     await expect(introParagraph).toContainText("Photographer, runner, music lover and software engineer based in Vancouver, BC, Canada 🇨🇦");
     await expect(introParagraph).toBeVisible();
 
-    // Assert the navigation link to Photography
+    // Assert the navigation link
     const photographyLink = page.getByRole('link', { name: 'Photography' });
     await expect(photographyLink).toBeVisible();
     await expect(photographyLink).toHaveAttribute('href', '/photography/');
