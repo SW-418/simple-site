@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@playwright/test": "^1.54.2",
+    "@playwright/test": "^1.55.0",
     "@types/node": "^24",
     "@types/react": "19.1.10",
     "@types/react-dom": "19.1.7",
