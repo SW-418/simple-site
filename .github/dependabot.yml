@@ -9,16 +9,13 @@ updates:
     groups:
       react:
         patterns:
-          - "^react(-dom)?$"
-          - "^@types/react(-dom)?$"
+          - "react"
       tailwind:
         patterns:
-          - "^@tailwindcss/postcss$"
-          - "^tailwindcss$"
+          - "tailwind"
       next:
         patterns:
-          - "^next$"
-          - "^eslint-config-next$"
+          - "next"
 
   - package-ecosystem: "github-actions"
     directory: "/"
