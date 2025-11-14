@@ -4,12 +4,21 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+
     # Group React-related packages together to prevent failures
     groups:
       react:
         patterns:
           - "^react(-dom)?$"
           - "^@types/react(-dom)?$"
+      tailwind:
+        patterns:
+          - "^@tailwindcss/postcss$"
+          - "^tailwindcss$"
+      next:
+        patterns:
+          - "^next$"
+          - "^eslint-config-next$"
 
   - package-ecosystem: "github-actions"
     directory: "/"
