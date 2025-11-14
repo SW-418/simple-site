@@ -10,12 +10,16 @@ updates:
       react:
         patterns:
           - "react"
+          - "react-dom"
+          - "@types/react*"
       tailwind:
         patterns:
-          - "tailwind"
+          - "tailwind*"
+          - "@tailwindcss/*"
       next:
         patterns:
           - "next"
+          - "eslint-config-next"
 
   - package-ecosystem: "github-actions"
     directory: "/"
