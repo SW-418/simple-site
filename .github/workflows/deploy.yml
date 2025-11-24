@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository (Latest)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         if: github.event.inputs.git-commit == ''
       - name: Clone repository (Custom commit)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         if: github.event.inputs.git-commit != ''
         with:
           ref: ${{ github.event.inputs.git-commit }}
@@ -73,10 +73,10 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
       - name: Clone repository (Latest)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         if: github.event.inputs.git-commit == ''
       - name: Clone repository (Custom commit)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         if: github.event.inputs.git-commit != ''
         with:
           ref: ${{ github.event.inputs.git-commit }}
