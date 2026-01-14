@@ -10,7 +10,7 @@ interface NavigationBarProps {
 
 export default function NavigationBar({ navigatedPage = "/", navigatedPageText = "Home" }: NavigationBarProps) {
     return (
-        <nav className="bg-white/5 backdrop-blur-sm rounded-lg mx-auto">
+        <nav className="bg-gray-500/45 dark:bg-white/5 backdrop-blur-sm rounded-lg mx-auto">
             <div className="flex items-center justify-between p-2 pl-2 pr-2">
             <Link 
                 href={navigatedPage}
