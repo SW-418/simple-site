@@ -15,14 +15,14 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.17",
     "next": "16.1.1",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@playwright/test": "^1.57.0",
     "@types/node": "^24",
-    "@types/react": "^19.2.7",
+    "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
