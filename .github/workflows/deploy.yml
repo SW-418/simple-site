@@ -81,7 +81,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.git-commit }}
       - name: Setup terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4
       - name: Terraform fmt
         run: terraform fmt -check
         working-directory: infrastructure
